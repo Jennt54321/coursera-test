@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Box Model</title>
+<style>
+
+/* this chapter mainly talk about the border / margin / padding attribute */
+
+/* when assigning the width attribute, remember to set the box-sizing to border-box, otherwise it will only set the width of the content not the one include the padding and border box. */
+
+/* "*" means select every element and apply the attribute to it so it is not about inheritance */
+
+/* when trying to change the browser default we will have to overwrite it in the "*" style paragraph */
+
+
+* {
+  
+  /* box-sizing is an attribute that can't be inherited, thus, you can't put it in body style*/
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: gray;
+}
+
+#box {
+  background-color: blue;
+  padding: 10px;
+  border: 5px solid black;
+  width: 300px;
+
+  /* if the content is out of this height than it will just spill out the box cause the further element to write on top of is. To prevent this, you need to set the overflow prorperty in order to set the scroll bar etc. */
+
+  height: 50px;
+
+  /* when your margin didn't work check out the browser default, sometime your size is collapsed*/
+
+  margin-top: 50px;
+
+  /* when two element are next to each other that margin that you assign seperated will add up, however, when two element are on top of each other, only the largest size will appear, the smaller one will collapse */
+
+  overflow: auto;
+}
+#content {
+  background-color: #90EE90; /* green */
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Box Model</h1>
+
+<div id="box">
+  <div id="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit error quis ab perspiciatis eos inventore recusandae iste itaque numquam facilis, tenetur. Doloribus officiis quae facilis, nisi, ex similique. Animi, perferendis. 
+  </div>
+</div>
+
+
+</body>
+</html>

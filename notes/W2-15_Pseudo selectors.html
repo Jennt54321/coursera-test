@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Pseudo Class Selectors</title>
+<style>
+
+/* when define a special circumstances we can use pseudo selectors to define it */
+
+header li{
+  list-style: none;
+}
+
+a:link, a:visited{
+  text-decoration: none;
+  /* in order to remove the dot of the bullet list by default*/
+  background-color: green;
+  border: 1px solid blue;
+  color: black;
+  display: block; 
+  /* to define the a tage to deplay as a block element */
+  width: 200px;
+  margin-bottom: 1px;
+  text-align: center;
+}
+
+a:hover, a:active{
+  /* active means that when user click but haven't let go of the button */
+  background-color: red;
+  color: purple;
+}
+
+header li:nth-child(3){
+  /* to define the 3th button of the list */
+  font-size: 24px;
+}
+
+section div:nth-child(odd){
+  background-color: gray;
+}
+
+section div:nth-child(4):hover{
+  /* apply multiple circumstances */
+  background-color: green;
+  border: 1px solid black ;
+}
+
+section:hover div:nth-child(1){
+  /* when section is hover the 4th list in div should change it background to blue
+  only work when div is the child of section elementm, however, there is no need to type section and space in front of div tag */
+  
+  background-color: blue;
+}
+
+</style>
+</head>
+<body>
+<h1>Pseudo Class Selectors</h1>
+
+<header>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="http://goo.gl/V0Wl6s" target="_blank">AngularJS Course</a></li>
+    <li><a href="http://www.facebook.com/CourseraWebDev" target="_blank">Facebook Fan Page</a></li>
+  </ul>
+</header>
+
+<section>
+  <div>DIV 1</div>
+  <div>DIV 2</div>
+  <div>DIV 3</div>
+  <div>DIV 4</div>
+  <div>DIV 5</div>
+  <div>DIV 6</div>
+  <div>DIV 7</div>
+  <div>DIV 8</div>
+  <div>DIV 9</div>
+  <div>DIV 10</div>
+  <div>DIV 11</div>
+  <div>DIV 12</div>
+  <div>DIV 13</div>
+  <div>DIV 14</div>
+  <div>DIV 15</div>
+  <div>DIV 16</div>
+  <div>DIV 17</div>
+  <div>DIV 18</div>
+  <div>DIV 19</div>
+  <div>DIV 20</div>
+</section>
+
+</body>
+</html>
